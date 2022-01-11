@@ -49,7 +49,8 @@
 <p> sql语句：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">use mysql;</span><br><span class="line">select host, user from user;</span><br></pre></td></tr></table></figure>
 
-<p><img src="../img/image-20211112221557204.png" alt="image-20211112221557204"></p>
+<img src="/SuperStart.git.io/2021/11/12/windows%E8%BF%9E%E6%8E%A5%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%ADmysql/1.png" class="" width="1">
+
 <p>权限：</p>
 <p>ALL: 所有可用的权限</p>
 <p>CREATE: 创建库、表和索引</p>
