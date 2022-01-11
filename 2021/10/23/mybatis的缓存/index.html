@@ -81,13 +81,15 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="标签">
-<meta property="og:url" content="http://example.com/tags/index.html">
+<meta name="description" content="mybatis的缓存一级缓存是默认开启的，二级缓存需要手动打开 一级缓存作用域是sqlsession，二级缓存的作用域是mapper的namespace 一级缓存操作数据库的时候需要构造sqlsession对象，这个对象的缓存区域是hashmap结构的，每一个sqlsession对象内部都有一个一级缓存对象 一级缓存有什么作用？同一个sqlsession执行两个相同的查询语句的时候，第一次就会将查">
+<meta property="og:type" content="article">
+<meta property="og:title" content="个人博客">
+<meta property="og:url" content="http://example.com/2021/10/23/mybatis%E7%9A%84%E7%BC%93%E5%AD%98/index.html">
 <meta property="og:site_name" content="个人博客">
+<meta property="og:description" content="mybatis的缓存一级缓存是默认开启的，二级缓存需要手动打开 一级缓存作用域是sqlsession，二级缓存的作用域是mapper的namespace 一级缓存操作数据库的时候需要构造sqlsession对象，这个对象的缓存区域是hashmap结构的，每一个sqlsession对象内部都有一个一级缓存对象 一级缓存有什么作用？同一个sqlsession执行两个相同的查询语句的时候，第一次就会将查">
 <meta property="og:locale">
-<meta property="article:published_time" content="2022-01-08T04:39:04.000Z">
-<meta property="article:modified_time" content="2022-01-08T07:14:39.656Z">
+<meta property="article:published_time" content="2021-10-23T09:13:16.833Z">
+<meta property="article:modified_time" content="2021-10-23T14:45:12.839Z">
 <meta property="article:author" content="jiangxiliang">
 <meta name="twitter:card" content="summary">
 
@@ -119,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://example.com/tags/"/>
+  <link rel="canonical" href="http://example.com/2021/10/23/mybatis的缓存/"/>
 
 
 
 
 
-  <title>标签 | 个人博客</title>
+  <title> | 个人博客</title>
   
 
 
@@ -274,40 +276,168 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/23/mybatis%E7%9A%84%E7%BC%93%E5%AD%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人博客">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">标签</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                目前共计 1 个标签
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/hexo/" style="font-size: 12px; color: #ccc">hexo</a>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-10-23T17:13:16+08:00">
+                2021-10-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+		<span class="post-meta-divider">|</span>
+		<span id="busuanzi_value_page_pv"></span>���Ķ�
+	  
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h3 id="mybatis的缓存"><a href="#mybatis的缓存" class="headerlink" title="mybatis的缓存"></a>mybatis的缓存</h3><p>一级缓存是默认开启的，二级缓存需要手动打开</p>
+<p>一级缓存作用域是sqlsession，二级缓存的作用域是mapper的namespace</p>
+<p>一级缓存操作数据库的时候需要构造sqlsession对象，这个对象的缓存区域是hashmap结构的，每一个sqlsession对象内部都有一个一级缓存对象</p>
+<h3 id="一级缓存有什么作用？"><a href="#一级缓存有什么作用？" class="headerlink" title="一级缓存有什么作用？"></a>一级缓存有什么作用？</h3><p>同一个sqlsession执行两个相同的查询语句的时候，第一次就会将查询到的结果存储到缓存中，那么第二次查询就会从缓存中查询，避免直接对数据库进行查询，提高的查询的速度</p>
+<h3 id="一级缓存有什么问题？"><a href="#一级缓存有什么问题？" class="headerlink" title="一级缓存有什么问题？"></a>一级缓存有什么问题？</h3><p>sqlsessionA和sqlsessionB同时查询，A更新了数据，B查询还是之前保存在sqlsessionB中缓存中的旧数据，数据不一致问题。</p>
+<h3 id="如何避免一级缓存中的数据一致性问题呢？"><a href="#如何避免一级缓存中的数据一致性问题呢？" class="headerlink" title="如何避免一级缓存中的数据一致性问题呢？"></a>如何避免一级缓存中的数据一致性问题呢？</h3><p>1.sqlsession的生命周期不能过长</p>
+<p>2.对同一个语句更新，用同一个sqlsession</p>
+<p>3.直接关闭一级缓存</p>
+<h3 id="如何关闭一级缓存？"><a href="#如何关闭一级缓存？" class="headerlink" title="如何关闭一级缓存？"></a>如何关闭一级缓存？</h3><p>在mybatis全局配置文件中设置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;settiog name=&quot;localCacheScope&quot; value=&quot;STATEMENT&quot; /&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>sqlsession进行增删改操作的时候，缓存中的数据就会清空</strong></p>
+<h3 id="为什么sqlsession更新数据的时候，一级缓存中的数据会被清空？"><a href="#为什么sqlsession更新数据的时候，一级缓存中的数据会被清空？" class="headerlink" title="为什么sqlsession更新数据的时候，一级缓存中的数据会被清空？"></a>为什么sqlsession更新数据的时候，一级缓存中的数据会被清空？</h3><p>要是缓存中的数据不被清空，存储的就是更新前的数据，也就是脏数据。清空，保证了缓存保存的都是最新的数据。</p>
+<h3 id="有了一级缓存，为什么要提供二级缓存？"><a href="#有了一级缓存，为什么要提供二级缓存？" class="headerlink" title="有了一级缓存，为什么要提供二级缓存？"></a>有了一级缓存，为什么要提供二级缓存？</h3><p>1.二级缓存是mapper级别的，就是说多个sqlsession对象对mapper中的sql进行操作，共用二级缓存中的数据</p>
+<p>2.mybatis通常和spring一起使用，spring对mybatis进行整合。不是在事务的环境下，每次对数据库的操作都是不同的sqlsession，操作完就关闭sqlsession</p>
+<h3 id="如何开启二级缓存？"><a href="#如何开启二级缓存？" class="headerlink" title="如何开启二级缓存？"></a>如何开启二级缓存？</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;setting name=&quot;cacheEnabled&quot; value=&quot;true&quot;/&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何使用二级缓存？"><a href="#如何使用二级缓存？" class="headerlink" title="如何使用二级缓存？"></a>如何使用二级缓存？</h3><p>在标签<mapper>下面添加<cache/></p>
+<h3 id="为什么二级缓存不建议使用？"><a href="#为什么二级缓存不建议使用？" class="headerlink" title="为什么二级缓存不建议使用？"></a>为什么二级缓存不建议使用？</h3><p>因为二级缓存的作用域的mapper的namespace，而如果对某一个表的操作包含多个namespace，那么数据就会出现问题</p>
+<p><strong>一般都是通过第三方来做缓存，比如redis等</strong></p>
+<h3 id="为什么mybatis使用缓存，对象需要序列化接口？"><a href="#为什么mybatis使用缓存，对象需要序列化接口？" class="headerlink" title="为什么mybatis使用缓存，对象需要序列化接口？"></a>为什么mybatis使用缓存，对象需要序列化接口？</h3><p><cache>有个readOnly属性，为true表示只读缓存，对所有的调用者返回同一个实例，因为对象没有序列化，速度最快。为false表示可写缓存，因为对象进行了序列化，速度慢，但对所有的调用者返回不同的实例，线程安全。</p>
+<p><strong>mybatis的二级缓存默认的可写的，可写缓存是序列化的。对象序列化存储到缓存中，从缓存中反序列化读取对象</strong></p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/10/23/jvm/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2021/10/25/%E5%BA%8F%E5%88%97%E5%8C%96/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -340,8 +470,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -418,6 +557,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#mybatis%E7%9A%84%E7%BC%93%E5%AD%98"><span class="nav-number">1.</span> <span class="nav-text">mybatis的缓存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E7%BA%A7%E7%BC%93%E5%AD%98%E6%9C%89%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">一级缓存有什么作用？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E7%BA%A7%E7%BC%93%E5%AD%98%E6%9C%89%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98%EF%BC%9F"><span class="nav-number">3.</span> <span class="nav-text">一级缓存有什么问题？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E4%B8%80%E7%BA%A7%E7%BC%93%E5%AD%98%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E4%B8%80%E8%87%B4%E6%80%A7%E9%97%AE%E9%A2%98%E5%91%A2%EF%BC%9F"><span class="nav-number">4.</span> <span class="nav-text">如何避免一级缓存中的数据一致性问题呢？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%85%B3%E9%97%AD%E4%B8%80%E7%BA%A7%E7%BC%93%E5%AD%98%EF%BC%9F"><span class="nav-number">5.</span> <span class="nav-text">如何关闭一级缓存？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88sqlsession%E6%9B%B4%E6%96%B0%E6%95%B0%E6%8D%AE%E7%9A%84%E6%97%B6%E5%80%99%EF%BC%8C%E4%B8%80%E7%BA%A7%E7%BC%93%E5%AD%98%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E4%BC%9A%E8%A2%AB%E6%B8%85%E7%A9%BA%EF%BC%9F"><span class="nav-number">6.</span> <span class="nav-text">为什么sqlsession更新数据的时候，一级缓存中的数据会被清空？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%89%E4%BA%86%E4%B8%80%E7%BA%A7%E7%BC%93%E5%AD%98%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E6%8F%90%E4%BE%9B%E4%BA%8C%E7%BA%A7%E7%BC%93%E5%AD%98%EF%BC%9F"><span class="nav-number">7.</span> <span class="nav-text">有了一级缓存，为什么要提供二级缓存？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%BC%80%E5%90%AF%E4%BA%8C%E7%BA%A7%E7%BC%93%E5%AD%98%EF%BC%9F"><span class="nav-number">8.</span> <span class="nav-text">如何开启二级缓存？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E4%BA%8C%E7%BA%A7%E7%BC%93%E5%AD%98%EF%BC%9F"><span class="nav-number">9.</span> <span class="nav-text">如何使用二级缓存？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BA%8C%E7%BA%A7%E7%BC%93%E5%AD%98%E4%B8%8D%E5%BB%BA%E8%AE%AE%E4%BD%BF%E7%94%A8%EF%BC%9F"><span class="nav-number">10.</span> <span class="nav-text">为什么二级缓存不建议使用？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88mybatis%E4%BD%BF%E7%94%A8%E7%BC%93%E5%AD%98%EF%BC%8C%E5%AF%B9%E8%B1%A1%E9%9C%80%E8%A6%81%E5%BA%8F%E5%88%97%E5%8C%96%E6%8E%A5%E5%8F%A3%EF%BC%9F"><span class="nav-number">11.</span> <span class="nav-text">为什么mybatis使用缓存，对象需要序列化接口？</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

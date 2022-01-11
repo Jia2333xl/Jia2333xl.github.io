@@ -81,13 +81,15 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="标签">
-<meta property="og:url" content="http://example.com/tags/index.html">
+<meta name="description" content="String的concat方法拼接字符串底层String str&#x3D;”战斗天使” “雅典娜”.concat(str)   1.在常量池中新建字符串”雅典娜“ 2.在concat方法中将两个字符串对应的字符数组复制到新的字符数组中 3.根据新字符数组，在堆中新建字符串对象 String为什么适合作为hashmap的key值？因为String是final修饰的，被创建后，hash值就不会再改变了，适合多">
+<meta property="og:type" content="article">
+<meta property="og:title" content="个人博客">
+<meta property="og:url" content="http://example.com/2021/10/27/String/index.html">
 <meta property="og:site_name" content="个人博客">
+<meta property="og:description" content="String的concat方法拼接字符串底层String str&#x3D;”战斗天使” “雅典娜”.concat(str)   1.在常量池中新建字符串”雅典娜“ 2.在concat方法中将两个字符串对应的字符数组复制到新的字符数组中 3.根据新字符数组，在堆中新建字符串对象 String为什么适合作为hashmap的key值？因为String是final修饰的，被创建后，hash值就不会再改变了，适合多">
 <meta property="og:locale">
-<meta property="article:published_time" content="2022-01-08T04:39:04.000Z">
-<meta property="article:modified_time" content="2022-01-08T07:14:39.656Z">
+<meta property="article:published_time" content="2021-10-27T06:11:37.769Z">
+<meta property="article:modified_time" content="2021-10-31T08:32:43.269Z">
 <meta property="article:author" content="jiangxiliang">
 <meta name="twitter:card" content="summary">
 
@@ -119,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://example.com/tags/"/>
+  <link rel="canonical" href="http://example.com/2021/10/27/String/"/>
 
 
 
 
 
-  <title>标签 | 个人博客</title>
+  <title> | 个人博客</title>
   
 
 
@@ -274,40 +276,167 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/27/String/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人博客">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">标签</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                目前共计 1 个标签
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/hexo/" style="font-size: 12px; color: #ccc">hexo</a>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-10-27T14:11:37+08:00">
+                2021-10-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+		<span class="post-meta-divider">|</span>
+		<span id="busuanzi_value_page_pv"></span>���Ķ�
+	  
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h3 id="String的concat方法拼接字符串底层"><a href="#String的concat方法拼接字符串底层" class="headerlink" title="String的concat方法拼接字符串底层"></a>String的concat方法拼接字符串底层</h3><p>String str=”战斗天使”</p>
+<p><strong>“雅典娜”.concat(str)</strong>  </p>
+<p>1.在常量池中新建字符串”雅典娜“</p>
+<p>2.在concat方法中将两个字符串对应的字符数组<strong>复制到新的字符数组</strong>中</p>
+<p>3.根据新字符数组，在<strong>堆中</strong>新建字符串对象</p>
+<h3 id="String为什么适合作为hashmap的key值？"><a href="#String为什么适合作为hashmap的key值？" class="headerlink" title="String为什么适合作为hashmap的key值？"></a>String为什么适合作为hashmap的key值？</h3><p>因为String是final修饰的，被创建后，hash值就不会再改变了，适合多个线程之间共享</p>
+<h3 id="String到底创建多少个对象呢？"><a href="#String到底创建多少个对象呢？" class="headerlink" title="String到底创建多少个对象呢？"></a>String到底创建多少个对象呢？</h3><p>直接赋值</p>
+<p>1.常量池没有 创建<strong>1个对象</strong></p>
+<p>2.常量池有，创建<strong>0个对象</strong> </p>
+<p>new创建字符串对象<strong>1个或者两个对象</strong>     两种情况：</p>
+<p>1.常量池中没有该对象，就在常量池中创建对象，堆中的对象指向常量池中的字符串</p>
+<p>2.常量池中有该对象就到堆中创建    </p>
+<h3 id="String的-号拼接原理"><a href="#String的-号拼接原理" class="headerlink" title="String的+号拼接原理"></a>String的+号拼接原理</h3><p>1.<strong>拼接过程中带变量的</strong>，用到new  Stringbuilder新建字符串对象，在调用两次append()方法，最后toString()方法       </p>
+<p>​    Stringbuilder的toString方法是再new String一个字符串对象      这个过程当中创建了两个对象</p>
+<p>2.+运算的两个字符串常量，编译器进行优化，直接在常量池里面创建拼接后的对象    </p>
+<h3 id="与equals"><a href="#与equals" class="headerlink" title="==与equals"></a>==与equals</h3><ol>
+<li><p>==两边都为null，并不会报错；而equals会null，会报kongzhizheng</p>
+</li>
+<li><p>==会比较两边数据类型，类型不匹配会报错</p>
+</li>
+</ol>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/10/26/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2021/10/27/arrayList/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -340,8 +469,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -418,6 +556,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#String%E7%9A%84concat%E6%96%B9%E6%B3%95%E6%8B%BC%E6%8E%A5%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%BA%95%E5%B1%82"><span class="nav-number">1.</span> <span class="nav-text">String的concat方法拼接字符串底层</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%82%E5%90%88%E4%BD%9C%E4%B8%BAhashmap%E7%9A%84key%E5%80%BC%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">String为什么适合作为hashmap的key值？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String%E5%88%B0%E5%BA%95%E5%88%9B%E5%BB%BA%E5%A4%9A%E5%B0%91%E4%B8%AA%E5%AF%B9%E8%B1%A1%E5%91%A2%EF%BC%9F"><span class="nav-number">3.</span> <span class="nav-text">String到底创建多少个对象呢？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String%E7%9A%84-%E5%8F%B7%E6%8B%BC%E6%8E%A5%E5%8E%9F%E7%90%86"><span class="nav-number">4.</span> <span class="nav-text">String的+号拼接原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8Eequals"><span class="nav-number">5.</span> <span class="nav-text">&#x3D;&#x3D;与equals</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

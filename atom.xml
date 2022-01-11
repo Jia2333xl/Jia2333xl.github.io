@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-01-11T02:20:14.240Z</updated>
+  <updated>2022-01-11T02:46:10.645Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
+    <title>hexo+pm2自动化部署</title>
     <link href="http://example.com/2022/01/07/hexo+pm2%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/"/>
     <id>http://example.com/2022/01/07/hexo+pm2%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/</id>
     <published>2022-01-07T10:31:59.016Z</published>
-    <updated>2022-01-11T02:20:14.240Z</updated>
+    <updated>2022-01-11T02:46:10.645Z</updated>
     
     <content type="html"><![CDATA[<h3 id="安装pm2"><a href="#安装pm2" class="headerlink" title="安装pm2"></a>安装pm2</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g pm2</span><br></pre></td></tr></table></figure><h3 id="在blog目录下面加run-js"><a href="#在blog目录下面加run-js" class="headerlink" title="在blog目录下面加run.js"></a>在blog目录下面加run.js</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//run</span><br><span class="line">const &#123; <span class="built_in">exec</span> &#125; = require(<span class="string">&#x27;child_process&#x27;</span>)</span><br><span class="line"><span class="built_in">exec</span>(<span class="string">&#x27;hexo server -p 4000 &amp; &#x27;</span>,(error, stdout, stderr) =&gt; &#123;</span><br><span class="line">        <span class="keyword">if</span>(error)&#123;</span><br><span class="line">                console.log(<span class="string">&#x27;exec error: $&#123;error&#125;&#x27;</span>)</span><br><span class="line">                <span class="built_in">return</span></span><br><span class="line">        &#125;</span><br><span class="line">        console.log(<span class="string">&#x27;stdout: $&#123;stdout&#125;&#x27;</span>);</span><br><span class="line">        console.log(<span class="string">&#x27;stderr: $&#123;stderr&#125;&#x27;</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><h3 id="运行pm2"><a href="#运行pm2" class="headerlink" title="运行pm2"></a>运行pm2</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm2 start run.js run</span><br></pre></td></tr></table></figure><h2 id="pm2常用命令"><a href="#pm2常用命令" class="headerlink" title="pm2常用命令"></a>pm2常用命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">pm2 list  <span class="comment">#查看进程</span></span><br><span class="line">pm2 monit <span class="comment">#监控</span></span><br><span class="line">pm2 stop all  <span class="comment">#停止全部进程</span></span><br><span class="line">pm2 stop 0  <span class="comment">#停止进程为0的进程</span></span><br><span class="line">pm2 reload all  <span class="comment">#重载所有进程</span></span><br></pre></td></tr></table></figure>]]></content>
     
@@ -33,10 +33,406 @@
     
     
     
-    <category term="hexo" scheme="http://example.com/categories/hexo/"/>
+    <category term="技术文章" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/"/>
     
     
-    <category term="pm2" scheme="http://example.com/tags/pm2/"/>
+    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2021/12/05/npm/"/>
+    <id>http://example.com/2021/12/05/npm/</id>
+    <published>2021-12-05T08:27:51.545Z</published>
+    <updated>2021-12-05T08:34:54.705Z</updated>
+    
+    <content type="html"><![CDATA[<p>多数情况用npm，出错再用cnpm</p><p>npm  install  –registry=<a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;多数情况用npm，出错再用cnpm&lt;/p&gt;
+&lt;p&gt;npm  install  –registry=&lt;a href=&quot;https://registry.npm.taobao.org/&quot;&gt;https://registry.npm.taobao.org&lt;/a&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2021/12/05/renren/"/>
+    <id>http://example.com/2021/12/05/renren/</id>
+    <published>2021-12-05T08:19:04.933Z</published>
+    <updated>2021-12-05T08:19:29.629Z</updated>
+    
+    <content type="html"><![CDATA[<p>renren-fast前端用10.24.0版本的node</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;renren-fast前端用10.24.0版本的node&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2021/11/18/sql%E8%AF%AD%E5%8F%A5/"/>
+    <id>http://example.com/2021/11/18/sql%E8%AF%AD%E5%8F%A5/</id>
+    <published>2021-11-18T08:44:57.803Z</published>
+    <updated>2021-12-24T01:17:58.938Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="if表达式"><a href="#if表达式" class="headerlink" title="if表达式"></a>if表达式</h3><p>if(判断,结果1,结果2)</p><p>如果判断为true，则返回结果1</p><p>如果判断为false，则返回结果2</p><h3 id="count"><a href="#count" class="headerlink" title="count"></a>count</h3><p>count(1)统计整个字段数据记录数</p><p>count(*)统计整个字段数据记录数，自动进行sql优化</p><p>count(列名)统计列名不为null的数量，包含空字符串</p><p>1.列名为主键，count(列名)比count(1)快；</p><p>2.列名不是主键,count(1)比count(列名)快</p><p>3.表中有多个列，没有主键，count(1)比count(*)快</p><p>4.有主键，count(主键)是最优的</p><p>5.表只有一个字段，用count(*)</p><h3 id="case…when…end-as"><a href="#case…when…end-as" class="headerlink" title="case…when…end as"></a>case…when…end as</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span></span><br><span class="line">    <span class="keyword">case</span></span><br><span class="line">        <span class="keyword">when</span> age<span class="operator">&gt;=</span><span class="number">25</span> <span class="keyword">then</span> <span class="string">&#x27;25岁及以上&#x27;</span></span><br><span class="line">        <span class="keyword">else</span> <span class="string">&#x27;25岁以下&#x27;</span></span><br><span class="line">        <span class="keyword">end</span> <span class="keyword">as</span> age_cut,</span><br><span class="line"><span class="built_in">count</span>(device_id) NUMBER</span><br><span class="line"><span class="keyword">from</span> <span class="keyword">user</span></span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> age_cut</span><br></pre></td></tr></table></figure><p><img src="C:\Users\jxl31\AppData\Roaming\Typora\typora-user-images\image-20211118172656599.png" alt="image-20211118172656599"></p><h3 id="保留小数"><a href="#保留小数" class="headerlink" title="保留小数"></a>保留小数</h3><p>round(number,2)  四舍五入，保留两位有效数字</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;if表达式&quot;&gt;&lt;a href=&quot;#if表达式&quot; class=&quot;headerlink&quot; title=&quot;if表达式&quot;&gt;&lt;/a&gt;if表达式&lt;/h3&gt;&lt;p&gt;if(判断,结果1,结果2)&lt;/p&gt;
+&lt;p&gt;如果判断为true，则返回结果1&lt;/p&gt;
+&lt;p&gt;如果判断为false，则</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2021/11/12/windows%E8%BF%9E%E6%8E%A5%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%ADmysql/"/>
+    <id>http://example.com/2021/11/12/windows%E8%BF%9E%E6%8E%A5%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%ADmysql/</id>
+    <published>2021-11-12T13:59:23.892Z</published>
+    <updated>2021-11-12T14:52:40.568Z</updated>
+    
+    <content type="html"><![CDATA[<p>一</p><p>修改mysql的配置文件/etc/mysql/my.conf，将bind-address后面增加远程访问IP地址或者禁掉这句话就可以让远程机登陆访问了。</p><p>bind-address=127.0.0.1  139.196.197.138<br>(允许多个IP可访问mysql服务器，空格隔开)</p><p>二</p><p> sql语句：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">use mysql;</span><br><span class="line">select host, user from user;</span><br></pre></td></tr></table></figure><img src="C:\Users\jxl31\AppData\Roaming\Typora\typora-user-images\image-20211112221557204.png" alt="image-20211112221557204" style="zoom:80%;" /><p>权限：</p><p>ALL: 所有可用的权限</p><p>CREATE: 创建库、表和索引</p><p>LOCK_TABLES: 锁定表</p><p>ALTER: 修改表</p><p>DELETE: 删除表</p><p>INSERT: 插入表或列</p><p>SELECT: 检索表或列的数据</p><p>CREATE_VIEW: 创建视图</p><p>SHOW_DATABASES: 列出数据库</p><p>DROP: 删除库、表和视图</p><p>GRANT&lt;权限1，权限2，。。。&gt;ON &lt;数据库&gt;.&lt;表&gt; TO ‘Kevin‘@’localhost’;</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">表示root用户下的所有数据库所有表允许远程访问</span><br><span class="line">GRANT ALL PRIVILEGES ON *.* TO &#x27;root&#x27;@&#x27;%&#x27;IDENTIFIED BY &#x27;111qqqpwd&#x27; WITH GRANT OPTION;</span><br></pre></td></tr></table></figure><p>三</p><p>重启mysql服务<br>service mysql restart</p><p>四</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; FLUSH PRIVILEGES;    此命令是为了让命令生效！</span><br></pre></td></tr></table></figure><h3 id="用户登陆命令"><a href="#用户登陆命令" class="headerlink" title="用户登陆命令"></a>用户登陆命令</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">以root身份登陆mysql</span><br><span class="line">mysql -u root -p    输入MySQL的root帐号的密码</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">以普通用户登陆</span><br><span class="line">sudo -u root -p     输入MySQL的root帐号的密码</span><br><span class="line">可以直接接密码    sudo -u root -p123456</span><br></pre></td></tr></table></figure><h3 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h3><p>创建一个用户名和密码分 为”root”和”123456”的用户。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; CREATE USER &#x27;root&#x27;@&#x27;localhost&#x27; IDENTIFIED BY &#x27;123456&#x27;;</span><br></pre></td></tr></table></figure><p>一旦用户被创建后，包括加密的密码、权限和资源限制在内的所有帐号细节都会被存储在一个名为user的表中</p><h3 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DROP USER &#x27;jack&#x27;@&#x27;localhost&#x27;;</span><br></pre></td></tr></table></figure><p>在/etc/mysql/mysql.conf.d目录下的mysqld.cnf文件</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;一&lt;/p&gt;
+&lt;p&gt;修改mysql的配置文件/etc/mysql/my.conf，将bind-address后面增加远程访问IP地址或者禁掉这句话就可以让远程机登陆访问了。&lt;/p&gt;
+&lt;p&gt;bind-address=127.0.0.1  139.196.197.138&lt;br&gt;(</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2021/11/10/%E4%BB%A3%E7%A0%81%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/"/>
+    <id>http://example.com/2021/11/10/%E4%BB%A3%E7%A0%81%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</id>
+    <published>2021-11-10T06:57:32.883Z</published>
+    <updated>2021-11-12T05:25:23.108Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><strong>这些天的企业培训让我了解了公司的工作环境与企业文化。通过这几天老师的教导，在我的大脑形成了大概的框架和思路，对我今后的工作有很大的帮助，但我知道这些是远远不够的，我还需要学习更多的工作方法，还需要在工作中慢慢总结属于我自己的经验和方法。</strong></p><p>​                    </p><h3 id="SSH"><a href="#SSH" class="headerlink" title="SSH"></a>SSH</h3><p>知道了外来的jar包是放在webapp/WEB-INF/lib中的，以及学会如何根据现有的实现增删改查，还学会了SVN的基本使用方法。</p><p><strong>包没有导入进去</strong></p><img src="C:\Users\jxl31\AppData\Roaming\Typora\typora-user-images\image-20211110145954092.png" alt="image-20211110145954092" style="zoom: 67%;" /><img src="C:\Users\jxl31\AppData\Roaming\Typora\typora-user-images\image-20211110150139684.png" alt="image-20211110150139684" style="zoom:50%;" /><img src="C:\Users\jxl31\AppData\Roaming\Typora\typora-user-images\image-20211110150122161.png" alt="image-20211110150122161" style="zoom: 67%;" /><p>找到导入的包在哪里，之后添加jar包</p><h3 id="postman测试"><a href="#postman测试" class="headerlink" title="postman测试"></a>postman测试</h3><p>一：</p><img src="C:\Users\jxl31\AppData\Roaming\Typora\typora-user-images\image-20211112114614125.png" alt="image-20211112114614125" style="zoom: 67%;" /><img src="C:\Users\jxl31\AppData\Roaming\Typora\typora-user-images\image-20211112114740965.png" alt="image-20211112114740965" style="zoom:50%;" /><p>二：</p><img src="C:\Users\jxl31\AppData\Roaming\Typora\typora-user-images\image-20211112114813538.png" alt="image-20211112114813538" style="zoom:50%;" /><p><img src="C:\Users\jxl31\AppData\Roaming\Typora\typora-user-images\image-20211112114838295.png" alt="image-20211112114838295"></p><p>直接在后面加上    /id值</p><p>三：</p><p>报错HttpMediaTypeNotSupportedException: Content type ‘text/plain;charset=UTF-8’</p><p>postman添加<img src="C:\Users\jxl31\AppData\Roaming\Typora\typora-user-images\image-20211112115156040.png" alt="image-20211112115156040" style="zoom: 67%;" /></p><h3 id="springboot问题"><a href="#springboot问题" class="headerlink" title="springboot问题"></a>springboot问题</h3><p>@MapperScan注解出现如下错误</p><p><img src="C:\Users\jxl31\AppData\Roaming\Typora\typora-user-images\image-20211112114313623.png" alt="image-20211112114313623"></p><p>缺少依赖</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;com.baomidou&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;mybatis-plus-boot-starter&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;3.4.2&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure><p>不用@MapperScan  可以直接在dao层中使用@Mapper注解</p><h3 id="springcloud问题"><a href="#springcloud问题" class="headerlink" title="springcloud问题"></a>springcloud问题</h3><p>一.Error creating bean with name ‘configurationPropertiesBeans‘</p><p>springcloud版本与springboot版本不对应</p><p>二. Cannot execute request on any known server</p><p>eureka配置不能单单只配置端口号，还需要eureka的相关配置</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">eureka:</span><br><span class="line">  instance:</span><br><span class="line">    hostname: 127.0.0.1</span><br><span class="line">  client:</span><br><span class="line">    register-with-eureka: false   #是否将自己注册到eureka中</span><br><span class="line">    fetch-registry: false         #是否从eureka中获取信息</span><br><span class="line">    service-url:</span><br><span class="line">      defaultZone: http://$&#123;eureka.instance.hostname&#125;:$&#123;server.port&#125;/eureka</span><br><span class="line">  server:</span><br><span class="line">    enable-self-preservation: false # 关闭自我保护</span><br><span class="line">    eviction-interval-timer-in-ms: 5000 # 每隔5秒进行一次服务列表清理</span><br></pre></td></tr></table></figure><p>三.Failed to bind properties under ‘spring.datasource.type’ to java.lang.Class&lt;javax.sql.DataSource&gt;:</p><p>原因：”DataSourceAutoConfiguration”类 发现DataSource类可用时，会自动配置DataSource</p><p>application.yml中没有配置数据库，就会报错</p><h3 id="springboot数据库配置"><a href="#springboot数据库配置" class="headerlink" title="springboot数据库配置"></a>springboot数据库配置</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">spring:</span><br><span class="line">  datasource:</span><br><span class="line">    type: com.alibaba.druid.pool.DruidDataSource</span><br><span class="line">    #MySQL配置</span><br><span class="line">    driverClassName: com.mysql.cj.jdbc.Driver</span><br><span class="line">    url: jdbc:mysql://localhost:3306/gym?useUnicode=true&amp;characterEncoding=UTF-8&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai</span><br><span class="line">    username: root</span><br><span class="line">    password: root</span><br></pre></td></tr></table></figure><h3 id="springcloud数据库配置"><a href="#springcloud数据库配置" class="headerlink" title="springcloud数据库配置"></a>springcloud数据库配置</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">spring:</span><br><span class="line">  application:</span><br><span class="line">    name: MemberApplication</span><br><span class="line">  datasource:</span><br><span class="line">    driver-class-name: com.mysql.cj.jdbc.Driver</span><br><span class="line">    url: jdbc:mysql://localhost:3306/gym?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=Asia/Shanghai</span><br><span class="line">    username: root</span><br><span class="line">    password: root</span><br><span class="line">    type: com.alibaba.druid.pool.DruidDataSource</span><br><span class="line">    minIdle: 5      # 最小连接池数量</span><br><span class="line">    maxActive: 20   # 最大连接池数量</span><br><span class="line">    maxWait: 60000  # 获取连接时最大等待时间</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;总结&quot;&gt;&lt;a href=&quot;#总结&quot; class=&quot;headerlink&quot; title=&quot;总结&quot;&gt;&lt;/a&gt;总结&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;这些天的企业培训让我了解了公司的工作环境与企业文化。通过这几天老师的教导，在我的大脑形成了大概的框架和思路，对我今后的工作有</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2021/11/06/nvm/"/>
+    <id>http://example.com/2021/11/06/nvm/</id>
+    <published>2021-11-06T10:27:24.354Z</published>
+    <updated>2021-11-06T10:56:16.081Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="查看所有可安装-Node-版本号"><a href="#查看所有可安装-Node-版本号" class="headerlink" title="查看所有可安装 Node 版本号"></a>查看所有可安装 Node 版本号</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm list available</span><br></pre></td></tr></table></figure><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//安装指定版本（推荐）</span></span><br><span class="line">nvm install <span class="number">14.8</span><span class="number">.0</span></span><br></pre></td></tr></table></figure><h5 id="查看已安装node版本"><a href="#查看已安装node版本" class="headerlink" title="查看已安装node版本"></a>查看已安装node版本</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm ls</span><br></pre></td></tr></table></figure><h5 id="使用指定版本node"><a href="#使用指定版本node" class="headerlink" title="使用指定版本node"></a>使用指定版本node</h5><figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 14.8.0 是版本号</span></span><br><span class="line">nvm <span class="keyword">use</span> <span class="number">14.8</span>.<span class="number">0</span></span><br></pre></td></tr></table></figure><h5 id="卸载已安装node"><a href="#卸载已安装node" class="headerlink" title="卸载已安装node"></a>卸载已安装node</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 14.8.0 是版本号</span></span><br><span class="line">nvm uninstall <span class="number">14.8</span><span class="number">.0</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h5 id=&quot;查看所有可安装-Node-版本号&quot;&gt;&lt;a href=&quot;#查看所有可安装-Node-版本号&quot; class=&quot;headerlink&quot; title=&quot;查看所有可安装 Node 版本号&quot;&gt;&lt;/a&gt;查看所有可安装 Node 版本号&lt;/h5&gt;&lt;figure class=&quot;hi</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2021/11/05/vue/"/>
+    <id>http://example.com/2021/11/05/vue/</id>
+    <published>2021-11-05T12:55:32.711Z</published>
+    <updated>2021-11-05T12:57:14.840Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>background-image: url(‘/img/2.PNG’);</li></ol><p>如果要链接到本地图片的话，需要在public文件夹中创建img文件夹，在里面放图片</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;background-image: url(‘/img/2.PNG’);&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如果要链接到本地图片的话，需要在public文件夹中创建img文件夹，在里面放图片&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2021/11/05/%E8%8A%8B%E9%81%93%E9%97%AE%E9%A2%98/"/>
+    <id>http://example.com/2021/11/05/%E8%8A%8B%E9%81%93%E9%97%AE%E9%A2%98/</id>
+    <published>2021-11-05T04:59:09.616Z</published>
+    <updated>2021-11-05T06:51:43.528Z</updated>
+    
+    <content type="html"><![CDATA[<p>Error running ‘AdminServerApplication’: Command line is too long. Shorten command line for AdminServerApplication or also for Spring Boot default configuration.</p><p>原因：大多数操作系统都有最大的命令行限制，当超过此限制时，IDEA将无法运行您的应用程序。 当命令行长度超过32768个字符时，IDEA建议您切换到动态类路径。长类路径被写入一个文件，然后由应用程序启动器读取并通过系统类加载器加载。 如果您对实现细节感兴趣，可以查看IDEA Community edition源代码、JdkUtil.java文件、setupJVMCommandLine方法。</p><p>方法一：　选择Edit Configurations， 选择JAR mainfest即可</p><p>方法二：找到项目里面的idea/workspace.xml文件，然后再找到<code>&lt;component name=&quot;PropertiesComponent&quot;&gt;&lt;/component &gt;</code>标签，在里面添加<property name="dynamic.classpath" value="true" /></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Error running ‘AdminServerApplication’: Command line is too long. Shorten command line for AdminServerApplication or also for Spring Boot</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2021/10/31/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://example.com/2021/10/31/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</id>
+    <published>2021-10-31T09:41:23.468Z</published>
+    <updated>2021-10-31T14:40:49.559Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h3><p>private保证了外界不能够调用</p><p>private修饰构造器： 外界不能够通过new 对象来创建对象</p><p>final保证了其他线程看到final字段是初始化的  final修饰的字段不会被程序重排序</p><p>static保证了对象随类的加载而加载</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;单例模式&quot;&gt;&lt;a href=&quot;#单例模式&quot; class=&quot;headerlink&quot; title=&quot;单例模式&quot;&gt;&lt;/a&gt;单例模式&lt;/h3&gt;&lt;p&gt;private保证了外界不能够调用&lt;/p&gt;
+&lt;p&gt;private修饰构造器： 外界不能够通过new 对象来创建对象&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2021/10/31/%E5%8F%8D%E5%B0%84/"/>
+    <id>http://example.com/2021/10/31/%E5%8F%8D%E5%B0%84/</id>
+    <published>2021-10-31T05:10:08.526Z</published>
+    <updated>2021-12-13T10:09:01.164Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="反射的优缺点"><a href="#反射的优缺点" class="headerlink" title="反射的优缺点"></a>反射的优缺点</h3><p>缺点：1.反射可以访问私有字段和私有方法，会破坏封装   2.反射性能差</p><p>优点：1.开发通用的框架    2.动态代理    3.注解</p><h3 id="反射获取class对象的3种方法"><a href="#反射获取class对象的3种方法" class="headerlink" title="反射获取class对象的3种方法"></a>反射获取class对象的3种方法</h3><p>1.调用getClass（）方法</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">User user=<span class="keyword">new</span> User();</span><br><span class="line">Class userClass=user.getClass();</span><br></pre></td></tr></table></figure><p>2.直接通过类名.class方式得到</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Class userClass=User.class;</span><br></pre></td></tr></table></figure><p>3.通过Class对象的forName(类的全路径名)静态方法获取（用的最多)但是可能会抛出ClassNotFoundException异常</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Class userClass=Class.forName(<span class="string">&quot;com.offcn.User&quot;</span>);</span><br></pre></td></tr></table></figure><h3 id="获取对象实例的两种方法"><a href="#获取对象实例的两种方法" class="headerlink" title="获取对象实例的两种方法"></a>获取对象实例的两种方法</h3><p>1.通过字节码文件(调用无参构造器)</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">User user=userClass.newInstance();</span><br></pre></td></tr></table></figure><p>2.有参构造器</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.获取构造对象</span></span><br><span class="line">Constructor  constructor = userClass.getConstructor(String.class,Integer.class);</span><br><span class="line"><span class="comment">//2.通过构造方法获取实例</span></span><br><span class="line">User user = constructor.newInstance(<span class="string">&quot;lily&quot;</span>,<span class="number">23</span>);</span><br></pre></td></tr></table></figure><h3 id="反射调用方法method-invoke-具体是怎么实现的？"><a href="#反射调用方法method-invoke-具体是怎么实现的？" class="headerlink" title="反射调用方法method.invoke()具体是怎么实现的？"></a>反射调用方法method.invoke()具体是怎么实现的？</h3><p>调用了一个接口methodAccessor，这个接口有两个实现类</p><p>NativeMethodAccessorImpl   本地方法来实现反射调用</p><p>DelegatingMethodAccessorImpl    委派模式来实现反射调用</p><p>反射调用次数少于15次用本地方法    多于15次用委派模式</p><h3 id="Field类"><a href="#Field类" class="headerlink" title="Field类"></a>Field类</h3><p>getDeclaredField方法获取本类的属性</p><p>getField只能够获取本类public属性</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;反射的优缺点&quot;&gt;&lt;a href=&quot;#反射的优缺点&quot; class=&quot;headerlink&quot; title=&quot;反射的优缺点&quot;&gt;&lt;/a&gt;反射的优缺点&lt;/h3&gt;&lt;p&gt;缺点：1.反射可以访问私有字段和私有方法，会破坏封装   2.反射性能差&lt;/p&gt;
+&lt;p&gt;优点：1.开发通用的</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2021/10/30/%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D/"/>
+    <id>http://example.com/2021/10/30/%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D/</id>
+    <published>2021-10-30T12:30:41.222Z</published>
+    <updated>2021-10-30T13:16:51.163Z</updated>
+    
+    <content type="html"><![CDATA[<p>浅拷贝</p><p>一个对象拷贝到另一个对象，再改变其中的引用类型（不包括String，应该String不可变）属性，另一个对象的值也跟着改变</p><p>深拷贝</p><p>一个对象拷贝到另一个对象，再改变其中的引用类型属性，另一个对象的值不变。</p><p>深拷贝的两种方法</p><p>1.重写clone方法时，对自定义对象也进行clone。自定义对象也需要实现cloneable接口（引用类型属性多的时候，需要重写多个，不方便）</p><p>2.使用输入、输出流进行序列化、反序列化进行clone</p><p>​    </p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.</span></span><br><span class="line">ByteArrayOutputStream    bos=<span class="keyword">new</span>  ByteArrayOutputStream() <span class="comment">//在内存中开辟写缓存区，默认是32字节</span></span><br><span class="line">ObjectOutputStream  oos=<span class="keyword">new</span> ObjectOutputStream(bos)  </span><br><span class="line">op.writeObject();<span class="comment">//在缓存区中序列化对象</span></span><br><span class="line"><span class="comment">//2.</span></span><br><span class="line">ByteArrayInputStream    bis=<span class="keyword">new</span>  ByteArrayInputStream(oos.toByteArray()) <span class="comment">//在内存中开辟读缓存区</span></span><br><span class="line">ObjectInputStream  ois=<span class="keyword">new</span> ObjectInputStream(bis)  </span><br><span class="line">op.readObject();<span class="comment">//在缓存区中反序列化对象</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;浅拷贝&lt;/p&gt;
+&lt;p&gt;一个对象拷贝到另一个对象，再改变其中的引用类型（不包括String，应该String不可变）属性，另一个对象的值也跟着改变&lt;/p&gt;
+&lt;p&gt;深拷贝&lt;/p&gt;
+&lt;p&gt;一个对象拷贝到另一个对象，再改变其中的引用类型属性，另一个对象的值不变。&lt;/p&gt;
+&lt;p&gt;深拷</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2021/10/27/arrayList/"/>
+    <id>http://example.com/2021/10/27/arrayList/</id>
+    <published>2021-10-27T11:06:01.313Z</published>
+    <updated>2021-10-27T11:06:01.313Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2021/10/27/String/"/>
+    <id>http://example.com/2021/10/27/String/</id>
+    <published>2021-10-27T06:11:37.769Z</published>
+    <updated>2021-10-31T08:32:43.269Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="String的concat方法拼接字符串底层"><a href="#String的concat方法拼接字符串底层" class="headerlink" title="String的concat方法拼接字符串底层"></a>String的concat方法拼接字符串底层</h3><p>String str=”战斗天使”</p><p><strong>“雅典娜”.concat(str)</strong>  </p><p>1.在常量池中新建字符串”雅典娜“</p><p>2.在concat方法中将两个字符串对应的字符数组<strong>复制到新的字符数组</strong>中</p><p>3.根据新字符数组，在<strong>堆中</strong>新建字符串对象</p><h3 id="String为什么适合作为hashmap的key值？"><a href="#String为什么适合作为hashmap的key值？" class="headerlink" title="String为什么适合作为hashmap的key值？"></a>String为什么适合作为hashmap的key值？</h3><p>因为String是final修饰的，被创建后，hash值就不会再改变了，适合多个线程之间共享</p><h3 id="String到底创建多少个对象呢？"><a href="#String到底创建多少个对象呢？" class="headerlink" title="String到底创建多少个对象呢？"></a>String到底创建多少个对象呢？</h3><p>直接赋值</p><p>1.常量池没有 创建<strong>1个对象</strong></p><p>2.常量池有，创建<strong>0个对象</strong> </p><p>new创建字符串对象<strong>1个或者两个对象</strong>     两种情况：</p><p>1.常量池中没有该对象，就在常量池中创建对象，堆中的对象指向常量池中的字符串</p><p>2.常量池中有该对象就到堆中创建    </p><h3 id="String的-号拼接原理"><a href="#String的-号拼接原理" class="headerlink" title="String的+号拼接原理"></a>String的+号拼接原理</h3><p>1.<strong>拼接过程中带变量的</strong>，用到new  Stringbuilder新建字符串对象，在调用两次append()方法，最后toString()方法       </p><p>​    Stringbuilder的toString方法是再new String一个字符串对象      这个过程当中创建了两个对象</p><p>2.+运算的两个字符串常量，编译器进行优化，直接在常量池里面创建拼接后的对象    </p><h3 id="与equals"><a href="#与equals" class="headerlink" title="==与equals"></a>==与equals</h3><ol><li><p>==两边都为null，并不会报错；而equals会null，会报kongzhizheng</p></li><li><p>==会比较两边数据类型，类型不匹配会报错</p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;String的concat方法拼接字符串底层&quot;&gt;&lt;a href=&quot;#String的concat方法拼接字符串底层&quot; class=&quot;headerlink&quot; title=&quot;String的concat方法拼接字符串底层&quot;&gt;&lt;/a&gt;String的concat方法拼接字符串</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2021/10/26/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F/"/>
+    <id>http://example.com/2021/10/26/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F/</id>
+    <published>2021-10-26T06:00:23.559Z</published>
+    <updated>2021-10-26T06:00:23.669Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="版本控制系统有几个阶段？"><a href="#版本控制系统有几个阶段？" class="headerlink" title="版本控制系统有几个阶段？"></a>版本控制系统有几个阶段？</h3><p>3个阶段，本地版本、集中式、分布式</p><h3 id="本地版本控制解决了什么问题？"><a href="#本地版本控制解决了什么问题？" class="headerlink" title="本地版本控制解决了什么问题？"></a>本地版本控制解决了什么问题？</h3><p>人们直接将各个版本的代码下载到电脑上，会出现目录混淆，写错文件等错误</p><h3 id="最流行的RCS（本地版本控制）原理"><a href="#最流行的RCS（本地版本控制）原理" class="headerlink" title="最流行的RCS（本地版本控制）原理"></a>最流行的RCS（本地版本控制）原理</h3><p>在硬盘上面保存补丁集（通过补丁可以计算出各个版本的文件内容）</p><h3 id="集中式版本控制解决了什么问题？"><a href="#集中式版本控制解决了什么问题？" class="headerlink" title="集中式版本控制解决了什么问题？"></a>集中式版本控制解决了什么问题？</h3><p>能够让不同系统上的开发者协同工作</p><h3 id="集中化的版本控制系统的原理"><a href="#集中化的版本控制系统的原理" class="headerlink" title="集中化的版本控制系统的原理"></a>集中化的版本控制系统的原理</h3><p>（Centralized Version Controller System  简称<strong>CVCS</strong>)</p><p>这类系统如<strong>CVS,Subversion，Perforce</strong>等都有一个<strong>单一集中管理的服务器</strong>，<strong>保存所有文件的修订版本</strong>，协同工作的人们<strong>通过客户端连接到服务器，取得最新的文件或者提交更新</strong></p><h3 id="集中化版本控制的优点有哪些？"><a href="#集中化版本控制的优点有哪些？" class="headerlink" title="集中化版本控制的优点有哪些？"></a>集中化版本控制的优点有哪些？</h3><p>1.可以看到项目中其他人正在做些什么</p><p>2.管理员轻松掌控每个开发者的权限</p><h3 id="集中化版本控制的缺点有哪些？"><a href="#集中化版本控制的缺点有哪些？" class="headerlink" title="集中化版本控制的缺点有哪些？"></a>集中化版本控制的缺点有哪些？</h3><p>1.单一集中管理的服务器一旦宕机了，所有人无法工作</p><p>2.没有做好备份的情况下，服务器中的数据库所在磁盘发生损坏后，将丢失所有数据（包括项目整个变更历史），只留下人们各自电脑中的单独<strong>快照</strong>（快照是一种特殊的版本，指定了<strong>某个当前的开发进度的副本</strong>。 不同于常规的版本，<strong>Maven 每次构建都会在远程仓库中检查新的快照</strong>）</p><h3 id="分布式版本控制的原理，优点"><a href="#分布式版本控制的原理，优点" class="headerlink" title="分布式版本控制的原理，优点"></a>分布式版本控制的原理，优点</h3><p>如<code>Git</code>、<code>Mercurial</code>、<code>Bazaar</code> 以及 <code>Darcs</code> 等</p><p>1.客户端不只是提取最新版本的文件快照，而是<strong>把代码仓库完整的镜像下来，包括整个历史记录</strong>。这样服务器发生故障，都可以通过任何一个镜像出来的本地仓库进行恢复</p><p>2.许多这类系统还可以<strong>指定其他的远程代码仓库进行交互</strong>，可以在同一个项目中与不同工作小组相互协作</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;版本控制系统有几个阶段？&quot;&gt;&lt;a href=&quot;#版本控制系统有几个阶段？&quot; class=&quot;headerlink&quot; title=&quot;版本控制系统有几个阶段？&quot;&gt;&lt;/a&gt;版本控制系统有几个阶段？&lt;/h3&gt;&lt;p&gt;3个阶段，本地版本、集中式、分布式&lt;/p&gt;
+&lt;h3 id=&quot;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2021/10/26/git%E5%91%BD%E4%BB%A4/"/>
+    <id>http://example.com/2021/10/26/git%E5%91%BD%E4%BB%A4/</id>
+    <published>2021-10-26T03:59:51.229Z</published>
+    <updated>2021-10-26T10:06:58.413Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="git里面的存储结构是怎样的？"><a href="#git里面的存储结构是怎样的？" class="headerlink" title="git里面的存储结构是怎样的？"></a>git里面的存储结构是怎样的？</h3><p>分为<strong>工作目录、暂存区、Git仓库</strong></p><p>工作目录是我们写代码的文件夹</p><p>暂存区：git add操作后存储的区域</p><p>Git仓库：代码提交到仓库中了</p><h3 id="提交流程"><a href="#提交流程" class="headerlink" title="提交流程"></a>提交流程</h3><p><strong>1.git add  跟踪</strong></p><p><strong>2.git status：</strong>  </p><p><strong>(1)工作目录中有哪些文件还没有放进暂存区</strong> </p><p><strong>(2)暂存区中有哪些内容还没有提交到仓库</strong> </p><p><strong>3.git commit</strong> </p><h3 id="场景操作"><a href="#场景操作" class="headerlink" title="场景操作"></a>场景操作</h3><p><strong>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令<code>git checkout -- file</code></strong></p><p><strong>场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令<code>git reset HEAD &lt;file&gt;</code>，就回到了场景1，第二步按场景1操作</strong></p><p><strong>场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，可以用命令<code>git reset --hard commit_id</code>，不过前提是没有推送到远程库</strong></p><h3 id="常用的命令"><a href="#常用的命令" class="headerlink" title="常用的命令"></a>常用的命令</h3><p><strong>git init初始化仓库</strong></p><p><strong>git clone [url]克隆仓库到本地</strong> </p><p><strong>git differ 查看修改之间的差异</strong> </p><p><strong>git log –pretty=oneline 查看提交历史</strong> </p><p><strong>cat 查看文件内容</strong> </p><p><strong>git reset 回退版本号</strong> </p><p><strong>git中，用HEAD表示当前版本号，上一个版本号为HEAD^,上上个版本号HEAD^^,往上100个版本号HEAD~100</strong></p><p><strong>git reflog查看每一次命令</strong> </p><p><strong>git commit -am 该命令会将本地工作区中修改后，还未使用git add命令添加到暂存区中的文件也一并提交上去</strong></p><p><strong>git commit –amend整个替换掉最新一次提交</strong>  </p><p><strong>git commit –amend –no-edit能让我们修复commit,而且不要修改commit描述</strong></p><p><strong>注意：不要对一个公共的commit进行amend，这样会影响到其他的开发者</strong></p><p><strong>git  restore 将在工作空间但是不在暂存区的文件撤销更改</strong></p><p><strong>git restore  –staged  作用是将暂存区的文件从暂存区撤出，但不会更改文件</strong></p><p><strong><strong><code>git checkout -- &lt;file&gt;</code> 是一个危险的命令。清除本地对那个文件的所有操作——Git 会用最近提交的版本覆盖掉它。</strong></strong></p><p><strong>git branch dev 创建dev分支</strong></p><p><strong>git switch dev/git checkout dev 切换dev分支</strong></p><p><strong>git switch -c dev/git checkout -b  dev 创建并切换到dev分支</strong></p><p><strong>git merge dev  在master上主动合并dev分支上的最新内容</strong></p><p><strong>git branch -d dev 删除dev分支</strong></p><p><strong>git fetch  从远程获取最新版本到本地，不会自动合并</strong></p><p><strong>git pull –rebase origin feature1  获取最新版本并合并</strong></p><h3 id="git-push的步骤"><a href="#git-push的步骤" class="headerlink" title="git push的步骤"></a>git push的步骤</h3><p><strong>1.建立新的远程主机 git remote add  origin http:github.com/..</strong></p><p><strong>2.查看所有远程仓库 git remote -v</strong></p><p><strong>3.如果有错误，删除  git remote rm</strong></p><p><strong>4.git pull  将远程分支拉取到本地</strong></p><p><strong>5.修改后  git add，然后git commit</strong> </p><p><strong>6.git pull</strong></p><p><strong>7.git push  远程主机名(origin)  本地分支名：远程主机分支</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;git里面的存储结构是怎样的？&quot;&gt;&lt;a href=&quot;#git里面的存储结构是怎样的？&quot; class=&quot;headerlink&quot; title=&quot;git里面的存储结构是怎样的？&quot;&gt;&lt;/a&gt;git里面的存储结构是怎样的？&lt;/h3&gt;&lt;p&gt;分为&lt;strong&gt;工作目录、暂存区</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2021/10/25/%E5%BA%8F%E5%88%97%E5%8C%96/"/>
+    <id>http://example.com/2021/10/25/%E5%BA%8F%E5%88%97%E5%8C%96/</id>
+    <published>2021-10-25T10:14:27.787Z</published>
+    <updated>2021-10-25T12:15:56.153Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="什么是序列化与反序列化？"><a href="#什么是序列化与反序列化？" class="headerlink" title="什么是序列化与反序列化？"></a>什么是序列化与反序列化？</h3><p>序列化是将对象转为字节码的过程，反序列化是将字节码转为对象的过程</p><h3 id="序列化与反序列化的步骤有哪些？"><a href="#序列化与反序列化的步骤有哪些？" class="headerlink" title="序列化与反序列化的步骤有哪些？"></a>序列化与反序列化的步骤有哪些？</h3><p>序列化：</p><p>1.创建对象输出流对象，可以包装其他类型的输出流（文件输出流）</p><p>2.调用里面的writeObject()方法</p><p>反序列化：</p><p>1.创建对象输入流对象，可以包装其他类型的输入流（文件输入流）</p><p>2.调用里面的readObject()方法</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;什么是序列化与反序列化？&quot;&gt;&lt;a href=&quot;#什么是序列化与反序列化？&quot; class=&quot;headerlink&quot; title=&quot;什么是序列化与反序列化？&quot;&gt;&lt;/a&gt;什么是序列化与反序列化？&lt;/h3&gt;&lt;p&gt;序列化是将对象转为字节码的过程，反序列化是将字节码转为对象的</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2021/10/23/mybatis%E7%9A%84%E7%BC%93%E5%AD%98/"/>
+    <id>http://example.com/2021/10/23/mybatis%E7%9A%84%E7%BC%93%E5%AD%98/</id>
+    <published>2021-10-23T09:13:16.833Z</published>
+    <updated>2021-10-23T14:45:12.839Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="mybatis的缓存"><a href="#mybatis的缓存" class="headerlink" title="mybatis的缓存"></a>mybatis的缓存</h3><p>一级缓存是默认开启的，二级缓存需要手动打开</p><p>一级缓存作用域是sqlsession，二级缓存的作用域是mapper的namespace</p><p>一级缓存操作数据库的时候需要构造sqlsession对象，这个对象的缓存区域是hashmap结构的，每一个sqlsession对象内部都有一个一级缓存对象</p><h3 id="一级缓存有什么作用？"><a href="#一级缓存有什么作用？" class="headerlink" title="一级缓存有什么作用？"></a>一级缓存有什么作用？</h3><p>同一个sqlsession执行两个相同的查询语句的时候，第一次就会将查询到的结果存储到缓存中，那么第二次查询就会从缓存中查询，避免直接对数据库进行查询，提高的查询的速度</p><h3 id="一级缓存有什么问题？"><a href="#一级缓存有什么问题？" class="headerlink" title="一级缓存有什么问题？"></a>一级缓存有什么问题？</h3><p>sqlsessionA和sqlsessionB同时查询，A更新了数据，B查询还是之前保存在sqlsessionB中缓存中的旧数据，数据不一致问题。</p><h3 id="如何避免一级缓存中的数据一致性问题呢？"><a href="#如何避免一级缓存中的数据一致性问题呢？" class="headerlink" title="如何避免一级缓存中的数据一致性问题呢？"></a>如何避免一级缓存中的数据一致性问题呢？</h3><p>1.sqlsession的生命周期不能过长</p><p>2.对同一个语句更新，用同一个sqlsession</p><p>3.直接关闭一级缓存</p><h3 id="如何关闭一级缓存？"><a href="#如何关闭一级缓存？" class="headerlink" title="如何关闭一级缓存？"></a>如何关闭一级缓存？</h3><p>在mybatis全局配置文件中设置</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;settiog name=&quot;localCacheScope&quot; value=&quot;STATEMENT&quot; /&gt;</span><br></pre></td></tr></table></figure><p><strong>sqlsession进行增删改操作的时候，缓存中的数据就会清空</strong></p><h3 id="为什么sqlsession更新数据的时候，一级缓存中的数据会被清空？"><a href="#为什么sqlsession更新数据的时候，一级缓存中的数据会被清空？" class="headerlink" title="为什么sqlsession更新数据的时候，一级缓存中的数据会被清空？"></a>为什么sqlsession更新数据的时候，一级缓存中的数据会被清空？</h3><p>要是缓存中的数据不被清空，存储的就是更新前的数据，也就是脏数据。清空，保证了缓存保存的都是最新的数据。</p><h3 id="有了一级缓存，为什么要提供二级缓存？"><a href="#有了一级缓存，为什么要提供二级缓存？" class="headerlink" title="有了一级缓存，为什么要提供二级缓存？"></a>有了一级缓存，为什么要提供二级缓存？</h3><p>1.二级缓存是mapper级别的，就是说多个sqlsession对象对mapper中的sql进行操作，共用二级缓存中的数据</p><p>2.mybatis通常和spring一起使用，spring对mybatis进行整合。不是在事务的环境下，每次对数据库的操作都是不同的sqlsession，操作完就关闭sqlsession</p><h3 id="如何开启二级缓存？"><a href="#如何开启二级缓存？" class="headerlink" title="如何开启二级缓存？"></a>如何开启二级缓存？</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;setting name=&quot;cacheEnabled&quot; value=&quot;true&quot;/&gt;</span><br></pre></td></tr></table></figure><h3 id="如何使用二级缓存？"><a href="#如何使用二级缓存？" class="headerlink" title="如何使用二级缓存？"></a>如何使用二级缓存？</h3><p>在标签<mapper>下面添加<cache/></p><h3 id="为什么二级缓存不建议使用？"><a href="#为什么二级缓存不建议使用？" class="headerlink" title="为什么二级缓存不建议使用？"></a>为什么二级缓存不建议使用？</h3><p>因为二级缓存的作用域的mapper的namespace，而如果对某一个表的操作包含多个namespace，那么数据就会出现问题</p><p><strong>一般都是通过第三方来做缓存，比如redis等</strong></p><h3 id="为什么mybatis使用缓存，对象需要序列化接口？"><a href="#为什么mybatis使用缓存，对象需要序列化接口？" class="headerlink" title="为什么mybatis使用缓存，对象需要序列化接口？"></a>为什么mybatis使用缓存，对象需要序列化接口？</h3><p><cache>有个readOnly属性，为true表示只读缓存，对所有的调用者返回同一个实例，因为对象没有序列化，速度最快。为false表示可写缓存，因为对象进行了序列化，速度慢，但对所有的调用者返回不同的实例，线程安全。</p><p><strong>mybatis的二级缓存默认的可写的，可写缓存是序列化的。对象序列化存储到缓存中，从缓存中反序列化读取对象</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;mybatis的缓存&quot;&gt;&lt;a href=&quot;#mybatis的缓存&quot; class=&quot;headerlink&quot; title=&quot;mybatis的缓存&quot;&gt;&lt;/a&gt;mybatis的缓存&lt;/h3&gt;&lt;p&gt;一级缓存是默认开启的，二级缓存需要手动打开&lt;/p&gt;
+&lt;p&gt;一级缓存作用域是s</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2021/10/23/jvm/"/>
+    <id>http://example.com/2021/10/23/jvm/</id>
+    <published>2021-10-23T08:20:00.870Z</published>
+    <updated>2021-11-16T01:51:16.947Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="我们通常都是通过new进行对象的创建，而虚拟机接收到一个new指令后，他会做什么操作呢？"><a href="#我们通常都是通过new进行对象的创建，而虚拟机接收到一个new指令后，他会做什么操作呢？" class="headerlink" title="我们通常都是通过new进行对象的创建，而虚拟机接收到一个new指令后，他会做什么操作呢？"></a>我们通常都是通过new进行对象的创建，而虚拟机接收到一个new指令后，他会做什么操作呢？</h3><h3 id="oopMap是什么东西？"><a href="#oopMap是什么东西？" class="headerlink" title="oopMap是什么东西？"></a>oopMap是什么东西？</h3><p>他可以告诉你栈中哪个位置原来存储的是什么。</p><h3 id="oopMap是怎么进行划分的？"><a href="#oopMap是怎么进行划分的？" class="headerlink" title="oopMap是怎么进行划分的？"></a>oopMap是怎么进行划分的？</h3><p>根据安全点（safepoint）将一个方法的代码分成几段，每一段是一个oopMap。一段当中多个对象的话，这段代码的oopMap就会包含多条记录</p><h3 id="什么是安全点（safepoint）？"><a href="#什么是安全点（safepoint）？" class="headerlink" title="什么是安全点（safepoint）？"></a>什么是安全点（safepoint）？</h3><p>1.循环的末尾</p><p>2.方法快要返回前/调用方法的call指令后（call是汇编语言中的，通常和ret指令相互配合来使用）</p><p>3.可能抛异常的位置</p><h3 id="为什么使用oopMap？"><a href="#为什么使用oopMap？" class="headerlink" title="为什么使用oopMap？"></a>为什么使用oopMap？</h3><p>1.因为可达性分型要求GC停顿所有的执行线程，从GCroots往下逐个检查里面的引用需要花费很多时间。这时使用oopMap这种数据结构记录哪些位置是引用的，GC可以直接扫描。</p><p>2.源代码变量都是有类型的，编译之后变量就存在栈中了，需要oopMap来存储相关的信息。</p><h3 id="为什么在安全点来记录oopMap？"><a href="#为什么在安全点来记录oopMap？" class="headerlink" title="为什么在安全点来记录oopMap？"></a>为什么在安全点来记录oopMap？</h3><p>因为安全点能够有效缩小oopMap需要记录的信息，空间开销也不会很大</p><h3 id="oopMap存在哪里，什么时候用？"><a href="#oopMap存在哪里，什么时候用？" class="headerlink" title="oopMap存在哪里，什么时候用？"></a>oopMap存在哪里，什么时候用？</h3><p>平时oopMap压缩后存在内存中，GC时才需要解压供GC使用</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;我们通常都是通过new进行对象的创建，而虚拟机接收到一个new指令后，他会做什么操作呢？&quot;&gt;&lt;a href=&quot;#我们通常都是通过new进行对象的创建，而虚拟机接收到一个new指令后，他会做什么操作呢？&quot; class=&quot;headerlink&quot; title=&quot;我们通常</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2021/10/16/hashmap/"/>
+    <id>http://example.com/2021/10/16/hashmap/</id>
+    <published>2021-10-16T12:09:54.395Z</published>
+    <updated>2021-10-16T14:50:06.438Z</updated>
+    
+    <content type="html"><![CDATA[<p>数组变量存储的是什么?</p><p>答：数组变量存储的是数组的首地址，数组里面每个元素地址=首地址+索引*字节数</p><p>什么是哈希算法？</p><p>哈希算法（也叫散列），就是把任意长度值（key）通过散列算法变换成固定长度的key(地址)， 通过这个地址进行访问的数据结构，它通过把关键码值映射到表中一个位置来访问记录，以加快查找速度。</p><p><strong>HashCode: 通过字符串算出它的ascii 码，进行mod(取模)%，算出哈希表中的下标</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;数组变量存储的是什么?&lt;/p&gt;
+&lt;p&gt;答：数组变量存储的是数组的首地址，数组里面每个元素地址=首地址+索引*字节数&lt;/p&gt;
+&lt;p&gt;什么是哈希算法？&lt;/p&gt;
+&lt;p&gt;哈希算法（也叫散列），就是把任意长度值（key）通过散列算法变换成固定长度的key(地址)， 通过这个地址进行访</summary>
+      
+    
+    
+    
     
   </entry>
   
