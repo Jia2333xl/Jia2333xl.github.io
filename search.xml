@@ -1,25 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>hexo+pm2自动化部署</title>
-    <url>/SuperStart.git.io/2022/01/07/hexo+pm2%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/</url>
-    <content><![CDATA[<h3 id="安装pm2"><a href="#安装pm2" class="headerlink" title="安装pm2"></a>安装pm2</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g pm2</span><br></pre></td></tr></table></figure>
-
-<h3 id="在blog目录下面加run-js"><a href="#在blog目录下面加run-js" class="headerlink" title="在blog目录下面加run.js"></a>在blog目录下面加run.js</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">//run</span><br><span class="line">const &#123; <span class="built_in">exec</span> &#125; = require(<span class="string">&#x27;child_process&#x27;</span>)</span><br><span class="line"><span class="built_in">exec</span>(<span class="string">&#x27;hexo server -p 4000 &amp; &#x27;</span>,(error, stdout, stderr) =&gt; &#123;</span><br><span class="line">        <span class="keyword">if</span>(error)&#123;</span><br><span class="line">                console.log(<span class="string">&#x27;exec error: $&#123;error&#125;&#x27;</span>)</span><br><span class="line">                <span class="built_in">return</span></span><br><span class="line">        &#125;</span><br><span class="line">        console.log(<span class="string">&#x27;stdout: $&#123;stdout&#125;&#x27;</span>);</span><br><span class="line">        console.log(<span class="string">&#x27;stderr: $&#123;stderr&#125;&#x27;</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<h3 id="运行pm2"><a href="#运行pm2" class="headerlink" title="运行pm2"></a>运行pm2</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pm2 start run.js run</span><br></pre></td></tr></table></figure>
-
-<h2 id="pm2常用命令"><a href="#pm2常用命令" class="headerlink" title="pm2常用命令"></a>pm2常用命令</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pm2 list  <span class="comment">#查看进程</span></span><br><span class="line">pm2 monit <span class="comment">#监控</span></span><br><span class="line">pm2 stop all  <span class="comment">#停止全部进程</span></span><br><span class="line">pm2 stop 0  <span class="comment">#停止进程为0的进程</span></span><br><span class="line">pm2 reload all  <span class="comment">#重载所有进程</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>技术文章</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>nvm常用命令</title>
     <url>/SuperStart.git.io/2021/11/06/nvm/</url>
     <content><![CDATA[<p>nvm：管理node的工具</p>
@@ -89,6 +70,25 @@
       </categories>
       <tags>
         <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo+pm2自动化部署</title>
+    <url>/SuperStart.git.io/2022/01/07/hexo+pm2%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/</url>
+    <content><![CDATA[<h3 id="安装pm2"><a href="#安装pm2" class="headerlink" title="安装pm2"></a>安装pm2</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g pm2</span><br></pre></td></tr></table></figure>
+
+<h3 id="在blog目录下面加run-js"><a href="#在blog目录下面加run-js" class="headerlink" title="在blog目录下面加run.js"></a>在blog目录下面加run.js</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">//run</span><br><span class="line">const &#123; <span class="built_in">exec</span> &#125; = require(<span class="string">&#x27;child_process&#x27;</span>)</span><br><span class="line"><span class="built_in">exec</span>(<span class="string">&#x27;hexo server -p 4000 &amp; &#x27;</span>,(error, stdout, stderr) =&gt; &#123;</span><br><span class="line">        <span class="keyword">if</span>(error)&#123;</span><br><span class="line">                console.log(<span class="string">&#x27;exec error: $&#123;error&#125;&#x27;</span>)</span><br><span class="line">                <span class="built_in">return</span></span><br><span class="line">        &#125;</span><br><span class="line">        console.log(<span class="string">&#x27;stdout: $&#123;stdout&#125;&#x27;</span>);</span><br><span class="line">        console.log(<span class="string">&#x27;stderr: $&#123;stderr&#125;&#x27;</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="运行pm2"><a href="#运行pm2" class="headerlink" title="运行pm2"></a>运行pm2</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pm2 start run.js run</span><br></pre></td></tr></table></figure>
+
+<h2 id="pm2常用命令"><a href="#pm2常用命令" class="headerlink" title="pm2常用命令"></a>pm2常用命令</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pm2 list  <span class="comment">#查看进程</span></span><br><span class="line">pm2 monit <span class="comment">#监控</span></span><br><span class="line">pm2 stop all  <span class="comment">#停止全部进程</span></span><br><span class="line">pm2 stop 0  <span class="comment">#停止进程为0的进程</span></span><br><span class="line">pm2 reload all  <span class="comment">#重载所有进程</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>技术文章</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
       </tags>
   </entry>
 </search>
