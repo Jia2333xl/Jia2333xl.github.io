@@ -1,26 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>nvm常用命令</title>
-    <url>/SuperStart.git.io/2021/11/06/nvm/</url>
-    <content><![CDATA[<p>nvm：管理node的工具</p>
-<h5 id="查看所有可安装-Node-版本号"><a href="#查看所有可安装-Node-版本号" class="headerlink" title="查看所有可安装 Node 版本号"></a>查看所有可安装 Node 版本号</h5><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">nvm list available</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">//安装指定版本（推荐）</span></span><br><span class="line">nvm install <span class="number">14.8</span><span class="number">.0</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="查看已安装node版本"><a href="#查看已安装node版本" class="headerlink" title="查看已安装node版本"></a>查看已安装node版本</h5><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">nvm ls</span><br></pre></td></tr></table></figure>
-
-<h5 id="使用指定版本node"><a href="#使用指定版本node" class="headerlink" title="使用指定版本node"></a>使用指定版本node</h5><figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 14.8.0 是版本号</span></span><br><span class="line">nvm <span class="keyword">use</span> <span class="number">14.8</span>.<span class="number">0</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="卸载已安装node"><a href="#卸载已安装node" class="headerlink" title="卸载已安装node"></a>卸载已安装node</h5><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 14.8.0 是版本号</span></span><br><span class="line">nvm uninstall <span class="number">14.8</span><span class="number">.0</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>技术文章</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>hexo+pm2自动化部署</title>
     <url>/SuperStart.git.io/2022/01/07/hexo+pm2%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/</url>
     <content><![CDATA[<h3 id="安装pm2"><a href="#安装pm2" class="headerlink" title="安装pm2"></a>安装pm2</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g pm2</span><br></pre></td></tr></table></figure>
@@ -89,6 +69,37 @@
       </categories>
       <tags>
         <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>nvm常用命令</title>
+    <url>/SuperStart.git.io/2021/11/06/nvm/</url>
+    <content><![CDATA[<p>nvm：管理node的工具</p>
+<h5 id="查看所有可安装-Node-版本号"><a href="#查看所有可安装-Node-版本号" class="headerlink" title="查看所有可安装 Node 版本号"></a>查看所有可安装 Node 版本号</h5><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">nvm list available</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">//安装指定版本（推荐）</span></span><br><span class="line">nvm install <span class="number">14.8</span><span class="number">.0</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="查看已安装node版本"><a href="#查看已安装node版本" class="headerlink" title="查看已安装node版本"></a>查看已安装node版本</h5><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">nvm ls</span><br></pre></td></tr></table></figure>
+
+<h5 id="使用指定版本node"><a href="#使用指定版本node" class="headerlink" title="使用指定版本node"></a>使用指定版本node</h5><figure class="highlight rust"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 14.8.0 是版本号</span></span><br><span class="line">nvm <span class="keyword">use</span> <span class="number">14.8</span>.<span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="卸载已安装node"><a href="#卸载已安装node" class="headerlink" title="卸载已安装node"></a>卸载已安装node</h5><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 14.8.0 是版本号</span></span><br><span class="line">nvm uninstall <span class="number">14.8</span><span class="number">.0</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>技术文章</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo+next个性化设置</title>
+    <url>/SuperStart.git.io/2022/01/12/hexo-next%E4%B8%AA%E6%80%A7%E5%8C%96%E8%AE%BE%E7%BD%AE/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>技术文章</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
       </tags>
   </entry>
 </search>
